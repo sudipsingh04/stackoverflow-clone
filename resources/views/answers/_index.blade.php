@@ -18,7 +18,7 @@
                                 <i class="fas fa-caret-down fa-3x"></i>
                             </a>
                             @can('accept', $answer)
-                                <a title="Click to mark as favorite answer (Click again to undo)"
+                                <a title="Click to mark as best answer (Click again to undo)"
                                 class="{{ $answer->status }} mt-2"
                                 onclick="event.preventDefault(); document.getElementById('accept-answer-{{$answer->id}}').submit();"
                                 >
@@ -29,7 +29,7 @@
                                 </form>
                             @else
                                 @if ($answer->is_best)
-                                    <a title="The question owner accepted this answer as favorite answer (Click again to undo)"
+                                    <a title="The question owner accepted this answer as best answer (Click again to undo)"
                                     class="{{ $answer->status }} mt-2"
                                     onclick="event.preventDefault(); document.getElementById('accept-answer-{{$answer->id}}').submit();"
                                     >
